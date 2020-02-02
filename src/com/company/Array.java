@@ -8,25 +8,25 @@ public class Array {
         System.out.println ("Write size of array: \n");
         Scanner r = new Scanner (System.in);
         int size = r.nextInt ();
-        int[] a = new int[size];
+        int[] a = new int[ size ];
         System.out.println ("Write the first number: \n");
-        a[0] = r.nextInt ();
+        a[ 0 ] = r.nextInt ();
         int i = 1;
-        for ( ; i < a.length - 1; i++) {
+        for (; i < a.length - 1; i++) {
             System.out.println ("Write next number: \n");
-            a[i] = r.nextInt ();
+            a[ i ] = r.nextInt ();
         }
         System.out.println ("Write the last number: \n");
-        a[i] = r.nextInt ();
+        a[ i ] = r.nextInt ();
 
         System.out.println ("\n");
 
-        sort(a);
+        sort (a);
 
 
     }
 
-    public static void sort(int[] a){
+    public static void sort (int[] a) {
         int buf;
         int n = 0;
         boolean s = false;
@@ -35,10 +35,10 @@ public class Array {
 
             for (int j = 0; j < a.length - 1; j++) {
                 for (int i = 0; i < a.length - 1; i++) {
-                    if (a[i] > a[i + 1]) {
-                        buf = a[i];
-                        a[i] = a[i + 1];
-                        a[i + 1] = buf;
+                    if (a[ i ] > a[ i + 1 ]) {
+                        buf = a[ i ];
+                        a[ i ] = a[ i + 1 ];
+                        a[ i + 1 ] = buf;
                         s = false;
                         n++;
 
