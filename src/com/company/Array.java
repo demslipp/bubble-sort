@@ -11,12 +11,13 @@ public class Array {
         int[] a = new int[size];
         System.out.println ("Write the first number: \n");
         a[0] = r.nextInt ();
-        for (int i = 1; i < a.length - 1; ++ i) {
+        int i = 1;
+        for ( ; i < a.length - 1; i++) {
             System.out.println ("Write next number: \n");
             a[i] = r.nextInt ();
         }
         System.out.println ("Write the last number: \n");
-        a[size - 1] = r.nextInt ();
+        a[i] = r.nextInt ();
 
         System.out.println ("\n");
 
