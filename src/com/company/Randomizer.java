@@ -6,8 +6,6 @@ import java.util.Scanner;
 public class Randomizer {
     public static void main (String[] args) {
         int buf;
-        int n = 0;
-        boolean s = false;
         System.out.println ("Write size of array: \n");
         Scanner r = new Scanner (System.in);
         int size = r.nextInt ();
