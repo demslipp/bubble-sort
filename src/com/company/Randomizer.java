@@ -3,7 +3,7 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class plus_random {
+public class Randomizer {
     public static void main (String[] args) {
         int buf;
         int n = 0;
@@ -32,34 +32,7 @@ public class plus_random {
 
         System.out.println ("\n");
 
-        while (! s) {
-            s = true;
-
-
-            for (int j = 0; j < a.length - 1; j++) {
-                for (int i = 0; i < a.length - j - 1; i++) {
-                    if (a[ i ] < a[ i + 1 ]) {
-                        buf = a[ i ];
-                        a[ i ] = a[ i + 1 ];
-                        a[ i + 1 ] = buf;
-                        s = false;
-                        n++;
-
-                        for (int value : a) {
-                            System.out.print (value + " ");
-                        }
-
-                        System.out.println ("\n");
-                    }
-                }
-            }
-
-        }
-        System.out.println ("Shifts: " + n);
-        System.out.print ("Result: ");
-        for (int value : a) {
-            System.out.print (value + " ");
-        }
+        Array.sort (a);
 
     }
 }

@@ -2,11 +2,9 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Incr {
+public class Array {
     public static void main (String[] args) {
-        int buf;
-        int n = 0;
-        boolean s = false;
+
         System.out.println ("Write size of array: \n");
         Scanner r = new Scanner (System.in);
         int size = r.nextInt ();
@@ -22,9 +20,17 @@ public class Incr {
 
         System.out.println ("\n");
 
+        sort(a);
+
+
+    }
+
+    public static void sort(int[] a){
+        int buf;
+        int n = 0;
+        boolean s = false;
         while (! s) {
             s = true;
-
 
             for (int j = 0; j < a.length - 1; j++) {
                 for (int i = 0; i < a.length - 1; i++) {
@@ -50,6 +56,5 @@ public class Incr {
         for (int value : a) {
             System.out.print (value + " ");
         }
-
     }
 }
