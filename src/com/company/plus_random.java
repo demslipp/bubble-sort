@@ -1,8 +1,9 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
-public class Incr {
+public class plus_random {
     public static void main ( String[] args ) {
         int buf;
         int n = 0;
@@ -11,14 +12,22 @@ public class Incr {
         Scanner r = new Scanner (System.in);
         int size = r.nextInt ();
         int[] a = new int[size];
-        System.out.println ("Write the first number: \n");
-        a[0] = r.nextInt ();
-        for (int i = 1; i < a.length - 1; ++ i) {
-            System.out.println ("Write next number: \n");
-            a[i] = r.nextInt ();
+
+        System.out.println ("Write range of array: \n");
+        int maxsize = r.nextInt ();
+        int minsize= r.nextInt ();
+
+        if(maxsize<minsize){
+            buf = maxsize;
+            maxsize=minsize;
+            minsize=buf;
         }
-        System.out.println ("Write the last number: \n");
-        a[size - 1] = r.nextInt ();
+
+        int dif = maxsize - minsize;
+        Random rnd = new Random ();
+        for (int i =0;i<a.length;i++) {
+            a[i] = rnd.nextInt(dif);
+        }
 
         System.out.println ("\n");
 
@@ -27,7 +36,7 @@ public class Incr {
 
 
             for (int j = 0; j < a.length - 1; j++) {
-                for (int i = 0; i < a.length - 1; i++) {
+                for (int i = 0; i < a.length - j - 1; i++) {
                     if (a[i] > a[i + 1]){
                         buf = a[i];
                         a[i] = a[i + 1];
