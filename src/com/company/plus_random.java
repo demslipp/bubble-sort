@@ -26,7 +26,7 @@ public class plus_random {
         int dif = maxsize - minsize;
         Random rnd = new Random ();
         for (int i =0;i<a.length;i++) {
-            a[i] = rnd.nextInt(dif);
+            a[i] = rnd.nextInt (10);
         }
 
         System.out.println ("\n");
@@ -36,7 +36,7 @@ public class plus_random {
 
 
             for (int j = 0; j < a.length - 1; j++) {
-                for (int i = 0; i < a.length - j - 1; i++) {
+                for (int i = 0; i < a.length-j - 1; i++) {
                     if (a[i] > a[i + 1]){
                         buf = a[i];
                         a[i] = a[i + 1];
