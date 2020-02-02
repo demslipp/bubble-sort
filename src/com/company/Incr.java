@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Incr {
-    public static void main ( String[] args ) {
+    public static void main (String[] args) {
         int buf;
         int n = 0;
         boolean s = false;
@@ -28,7 +28,7 @@ public class Incr {
 
             for (int j = 0; j < a.length - 1; j++) {
                 for (int i = 0; i < a.length - 1; i++) {
-                    if (a[i] > a[i + 1]){
+                    if (a[i] > a[i + 1]) {
                         buf = a[i];
                         a[i] = a[i + 1];
                         a[i + 1] = buf;
