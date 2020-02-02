@@ -7,22 +7,22 @@ public class Incr {
         int buf;
         int n = 0;
         boolean s = false;
-        System.out.println("Write the size of array: \n");
-        Scanner r = new Scanner(System.in);
-        int size = r.nextInt();
+        System.out.println ("Write the size of array: \n");
+        Scanner r = new Scanner (System.in);
+        int size = r.nextInt ();
         int[] a = new int[size];
-        System.out.println("Write the first number: \n");
-        a[0] = r.nextInt();
-        for(int i =1; i<a.length-1; ++i){
-            System.out.println("Write the next number: \n");
-            a[i]=r.nextInt();
+        System.out.println ("Write the first number: \n");
+        a[0] = r.nextInt ();
+        for (int i = 1; i < a.length - 1; ++ i) {
+            System.out.println ("Write the next number: \n");
+            a[i] = r.nextInt ();
         }
-        System.out.println("Write the last number: \n");
-        a[size-1] = r.nextInt();
+        System.out.println ("Write the last number: \n");
+        a[size - 1] = r.nextInt ();
 
-        System.out.println("\n");
+        System.out.println ("\n");
 
-        while(!s) {
+        while (! s) {
             s = true;
 
 
@@ -32,23 +32,23 @@ public class Incr {
                         buf = a[i];
                         a[i] = a[i + 1];
                         a[i + 1] = buf;
-                        s=false;
+                        s = false;
                         n++;
 
                         for (int value : a) {
-                            System.out.print(value + " ");
+                            System.out.print (value + " ");
                         }
 
-                        System.out.println("\n");
+                        System.out.println ("\n");
                     }
                 }
             }
 
-            }
-        System.out.println("Shifts: "+n);
-        System.out.print("Result: ");
+        }
+        System.out.println ("Shifts: " + n);
+        System.out.print ("Result: ");
         for (int value : a) {
-            System.out.print(value + " ");
+            System.out.print (value + " ");
         }
 
     }
